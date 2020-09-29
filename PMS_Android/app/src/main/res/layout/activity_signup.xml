@@ -77,6 +77,8 @@
             android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
             android:drawablePadding="16dp"
             android:hint="아이디를 입력해주세요"
+            android:drawableEnd="@drawable/ic_baseline_done_24"
+            android:drawableRight="@drawable/ic_baseline_done_24"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -99,9 +101,11 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_baseline_lock_24"
             android:drawableLeft="@drawable/ic_baseline_lock_24"
+
             android:drawablePadding="16dp"
             android:hint="비밀번호를 입력해주세요"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+             />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -126,15 +130,16 @@
             android:drawableLeft="@drawable/ic_baseline_check_circle_outline_24"
             android:drawablePadding="16dp"
             android:hint="비밀번호를 한번 더 입력해주세요"
-            android:inputType="textPassword"
-            android:textSize="12sp" />
+            android:drawableEnd="@drawable/ic_baseline_done_24"
+            android:drawableRight="@drawable/ic_baseline_done_24"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/signup_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:background="#D37C7C"
         android:text="회원가입"
         android:textColor="#FFFFFF"
