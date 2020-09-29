@@ -15,11 +15,15 @@ import kotlinx.android.synthetic.main.activity_main.*
 import splitties.activities.start
 
 class MainActivity : AppCompatActivity() {
+    var userId:String=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         if (readAutoLogin() == "") {
             start<MainLoginActivity>()
+        }
+        else{
+            userId=readAutoLogin()
         }
         supportFragmentManager.beginTransaction().replace(R.id.container, CalendarFragment())
             .commit()
