@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/calendar"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        android:title="일정"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/food_ic"
+        android:enabled="true"
+        android:icon="@drawable/ic_restaurant_black_18dp"
+        app:showAsAction="ifRoom"
+        android:title="급식" />
+    <item
+        android:id="@+id/notion"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="공지"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/introduce"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_text_fields_24"
+        android:title="소개"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/information"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_perm_identity_24"
+        android:title="마이페이지"
+        app:showAsAction="ifRoom" />
+
+
+</menu>
