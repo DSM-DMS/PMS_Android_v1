@@ -8,7 +8,7 @@ import android.widget.Toast
 import com.example.pms_android.R
 import kotlinx.android.synthetic.main.activity_signup.*
 
-class SigninActivity : AppCompatActivity() {
+class SignupActivity : AppCompatActivity() {
     var makePasswordCheck = false
     var checkPasswordCheck = false
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +43,7 @@ class SigninActivity : AppCompatActivity() {
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                make_password_layout.isPasswordVisibilityToggleEnabled=false
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -59,10 +60,12 @@ class SigninActivity : AppCompatActivity() {
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                make_password_layout.isPasswordVisibilityToggleEnabled=true
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 makeErrorCheck()
+                make_password_layout.isPasswordVisibilityToggleEnabled=true
             }
 
         }

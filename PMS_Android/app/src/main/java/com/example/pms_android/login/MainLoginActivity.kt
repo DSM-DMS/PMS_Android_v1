@@ -14,7 +14,7 @@ class MainLoginActivity : AppCompatActivity() {
             start<LoginActivity>()
         }
         start_signin_button.setOnClickListener {
-            start<SigninActivity>()
+            start<SignupActivity>()
         }
     }
 }

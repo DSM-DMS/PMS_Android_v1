@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.SigninActivity">
+    tools:context=".login.SignupActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -51,15 +51,15 @@
             android:id="@+id/signup_set_nickname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_baseline_perm_identity_24"
-            android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableLeft="@drawable/ic_baseline_edit_24"
             android:drawablePadding="16dp"
             android:hint="닉네임을 입력해주세요"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
+        android:id="@+id/make_id_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -90,8 +90,8 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
-        app:passwordToggleEnabled="true">
+        app:layout_constraintTop_toBottomOf="@+id/make_id_layout"
+        app:passwordToggleEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/signup_make_password"
