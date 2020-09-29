@@ -19,11 +19,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        if (readAutoLogin() == "") {
+        if (!readAutoLogin()) {
             start<MainLoginActivity>()
-        }
-        else{
-            userId=readAutoLogin()
         }
         supportFragmentManager.beginTransaction().replace(R.id.container, CalendarFragment())
             .commit()
@@ -63,9 +60,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun readAutoLogin(): String {
+    private fun readAutoLogin(): Boolean{
         val startShared = getSharedPreferences("auto_login", Context.MODE_PRIVATE)
-        return startShared.getString("get_id", "") ?: ""
+
+        if(startShared.getString("get_id", "") ?: ""==""){
+            return false
+        }
+        return true
     }
 
 
