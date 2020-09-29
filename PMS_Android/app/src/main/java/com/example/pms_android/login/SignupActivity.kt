@@ -7,6 +7,7 @@ import android.text.TextWatcher
 import android.widget.Toast
 import com.example.pms_android.R
 import kotlinx.android.synthetic.main.activity_signup.*
+import splitties.activities.start
 
 class SignupActivity : AppCompatActivity() {
     var makePasswordCheck = false
@@ -18,21 +19,7 @@ class SignupActivity : AppCompatActivity() {
         passwordWatcher()
         signin_back_button.setOnClickListener { finish() }
         signup_button.setOnClickListener {
-            if (signup_get_id.text.toString().length > 0) {
-                if (makePasswordCheck) {
-                    if (checkPasswordCheck) {
-                        //서버에 회원가입 정보 전달하는 부분
-                    } else {
-                        Toast.makeText(applicationContext, "입력하신 비밀번호와 다릅니다", Toast.LENGTH_SHORT)
-                            .show()
-                    }
-                } else {
-                    Toast.makeText(applicationContext, "올바른 비밀번호를 입력해주세요", Toast.LENGTH_SHORT)
-                        .show()
-                }
-            } else {
-                Toast.makeText(applicationContext, "id를 입력해주세요", Toast.LENGTH_SHORT).show()
-            }
+            checkStart()
         }
     }
 
@@ -43,7 +30,7 @@ class SignupActivity : AppCompatActivity() {
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                make_password_layout.isPasswordVisibilityToggleEnabled=false
+                make_password_layout.isPasswordVisibilityToggleEnabled = false
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -60,12 +47,12 @@ class SignupActivity : AppCompatActivity() {
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                make_password_layout.isPasswordVisibilityToggleEnabled=true
+                make_password_layout.isPasswordVisibilityToggleEnabled = true
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 makeErrorCheck()
-                make_password_layout.isPasswordVisibilityToggleEnabled=true
+                make_password_layout.isPasswordVisibilityToggleEnabled = true
             }
 
         }
@@ -96,6 +83,28 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
+    private fun checkStart() {
+        if (signup_get_id.text.toString().length > 0) {
+            if (makePasswordCheck) {
+                if (checkPasswordCheck) {
+                    if (signup_set_nickname.text.toString().length > 0) {
+                        //서버에 회원가입 정보 전달하는 부분
+                        start<LoginActivity>()
+                    } else {
+                        Toast.makeText(applicationContext, "닉네임을 입력해주세요", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    Toast.makeText(applicationContext, "입력하신 비밀번호와 다릅니다", Toast.LENGTH_SHORT)
+                        .show()
+                }
+            } else {
+                Toast.makeText(applicationContext, "올바른 비밀번호를 입력해주세요", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        } else {
+            Toast.makeText(applicationContext, "id를 확인해주세요", Toast.LENGTH_SHORT).show()
+        }
+    }
 
 
 }
