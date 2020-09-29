@@ -37,14 +37,37 @@
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingTop="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/signup_set_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_perm_identity_24"
+            android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+            android:drawablePadding="16dp"
+            android:hint="닉네임을 입력해주세요"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:paddingTop="0dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/signup_get_id"
@@ -86,24 +109,25 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:hint=" "
         android:paddingTop="0dp"
         android:paddingBottom="10dp"
-        android:hint=" "
         app:errorEnabled="true"
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/make_password_layout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/signup_check_password"
             android:layout_width="match_parent"
-            android:textSize="12sp"
-            android:drawablePadding="16dp"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_baseline_check_circle_outline_24"
             android:drawableLeft="@drawable/ic_baseline_check_circle_outline_24"
+            android:drawablePadding="16dp"
             android:hint="비밀번호를 한번 더 입력해주세요"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
