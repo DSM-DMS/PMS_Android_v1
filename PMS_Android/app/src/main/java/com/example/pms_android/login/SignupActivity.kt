@@ -87,9 +87,10 @@ class SignupActivity : AppCompatActivity() {
         if (signup_get_id.text.toString().length > 0) {
             if (makePasswordCheck) {
                 if (checkPasswordCheck) {
-                    if (signup_set_nickname.text.toString().length > 0) {
+                    if (signup_set_nickname.text.toString().isNotEmpty()) {
                         //서버에 회원가입 정보 전달하는 부분
                         start<LoginActivity>()
+                        finish()
                     } else {
                         Toast.makeText(applicationContext, "닉네임을 입력해주세요", Toast.LENGTH_SHORT).show()
                     }
