@@ -151,6 +151,7 @@
         android:layout_height="30dp"
         android:background="@drawable/ic_baseline_cancel_24"
         app:layout_constraintEnd_toStartOf="@+id/guideline1"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
