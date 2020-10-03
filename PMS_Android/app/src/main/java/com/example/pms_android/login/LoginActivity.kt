@@ -13,8 +13,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         login_back_button.setOnClickListener { finish() }
         login_button.setOnClickListener {
-            if (login_get_id.text.toString().length > 0) {
-                if (login_password.text.toString().length > 0) {
+            if (login_get_id.text.toString().isNotEmpty()) {
+                if (login_password.text.toString().isNotEmpty()) {
 //서버에 로그인 정보를 가져다 주는 부분
                 } else {
                     Toast.makeText(applicationContext, "비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show()
