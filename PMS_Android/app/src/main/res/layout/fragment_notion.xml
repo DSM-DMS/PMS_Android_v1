@@ -43,19 +43,13 @@
         android:drawableStart="@drawable/ic_baseline_search_24"
         android:drawableLeft="@drawable/ic_baseline_search_24"
         android:ems="10"
-        android:hint="   검색할 공지 제목을 입력하세요"
+        android:drawablePadding="16dp"
+        android:hint="검색할 공지 제목을 입력하세요"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Switch
-        android:id="@+id/notion_switch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
@@ -63,6 +57,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
         app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/notion_switch" />
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
