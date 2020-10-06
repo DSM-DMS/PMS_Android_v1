@@ -10,10 +10,10 @@ class MainLoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_login)
-        start_login_button.setOnClickListener {
+        mainlogin_button_startlogin.setOnClickListener {
             start<LoginActivity>()
         }
-        start_signin_button.setOnClickListener {
+        mainlogin_button_startsignup.setOnClickListener {
             start<SignupActivity>()
         }
     }

@@ -17,7 +17,7 @@ class SignupActivity : AppCompatActivity() {
         setContentView(R.layout.activity_signup)
         passwordCheckWatcher()
         passwordWatcher()
-        signin_back_button.setOnClickListener { finish() }
+        signup_back_button.setOnClickListener { finish() }
         signup_button.setOnClickListener {
             checkStart()
         }
@@ -30,7 +30,7 @@ class SignupActivity : AppCompatActivity() {
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                make_password_layout.isPasswordVisibilityToggleEnabled = false
+                signup_get_password_layout.isPasswordVisibilityToggleEnabled = false
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -41,18 +41,18 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun passwordWatcher() {
-        signup_make_password.addTextChangedListener(object : TextWatcher {
+        signup_get_password.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 makeErrorCheck()
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                make_password_layout.isPasswordVisibilityToggleEnabled = true
+                signup_get_password_layout.isPasswordVisibilityToggleEnabled = true
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 makeErrorCheck()
-                make_password_layout.isPasswordVisibilityToggleEnabled = true
+                signup_get_password_layout.isPasswordVisibilityToggleEnabled = true
             }
 
         }
@@ -60,25 +60,25 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun makeErrorCheck() {
-        if (signup_make_password.text.toString().length < 6) {
-            make_password_layout.isErrorEnabled = true
-            make_password_layout.error = "6자리이상으로 만들어주세요"
+        if (signup_get_password.text.toString().length < 6) {
+            signup_get_password_layout.isErrorEnabled = true
+            signup_get_password_layout.error = "6자리이상으로 만들어주세요"
             makePasswordCheck = false
         } else {
-            make_password_layout.isErrorEnabled = false
-            make_password_layout.error = null
+            signup_get_password_layout.isErrorEnabled = false
+            signup_get_password_layout.error = null
             makePasswordCheck = true
         }
     }
 
     private fun checkErrorCheck() {
-        if (signup_check_password.text.toString() != signup_make_password.text.toString()) {
-            check_password_layout.isErrorEnabled = true
-            check_password_layout.error = "비밀번호가 다릅니다"
+        if (signup_check_password.text.toString() != signup_check_password.text.toString()) {
+            signup_check_password_layout.isErrorEnabled = true
+            signup_check_password_layout.error = "비밀번호가 다릅니다"
             checkPasswordCheck = false
         } else {
-            check_password_layout.isErrorEnabled = false
-            check_password_layout.error = null
+            signup_check_password_layout.isErrorEnabled = false
+            signup_check_password_layout.error = null
             checkPasswordCheck = true
         }
     }
@@ -87,7 +87,7 @@ class SignupActivity : AppCompatActivity() {
         if (signup_get_id.text.toString().length > 0) {
             if (makePasswordCheck) {
                 if (checkPasswordCheck) {
-                    if (signup_set_nickname.text.toString().isNotEmpty()) {
+                    if (signup_get_nickname.text.toString().isNotEmpty()) {
                         //서버에 회원가입 정보 전달하는 부분
                         start<LoginActivity>()
                         finish()
