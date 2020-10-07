@@ -5,17 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
-import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
-import com.example.pms_android.KeyboardManager
-import com.example.pms_android.MainActivity
+import com.example.pms_android.util.KeyboardManager
 import com.example.pms_android.R
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_signup.*
 import splitties.activities.start
 
 class LoginActivity : AppCompatActivity() {
-    val keyboard=KeyboardManager()
+    val keyboard= KeyboardManager()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)

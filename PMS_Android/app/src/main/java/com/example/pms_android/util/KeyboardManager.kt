@@ -1,4 +1,4 @@
-package com.example.pms_android
+package com.example.pms_android.util
 
 import android.content.Context
 import android.view.inputmethod.InputMethodManager

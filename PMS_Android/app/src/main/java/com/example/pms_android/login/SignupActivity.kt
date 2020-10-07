@@ -1,6 +1,5 @@
 package com.example.pms_android.login
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -8,7 +7,7 @@ import android.text.TextWatcher
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
-import com.example.pms_android.KeyboardManager
+import com.example.pms_android.util.KeyboardManager
 import com.example.pms_android.R
 import kotlinx.android.synthetic.main.activity_signup.*
 import splitties.activities.start
@@ -16,7 +15,7 @@ import splitties.activities.start
 class SignupActivity : AppCompatActivity() {
     var makePasswordCheck = false
     var checkPasswordCheck = false
-    val keyboard=KeyboardManager()
+    val keyboard= KeyboardManager()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
