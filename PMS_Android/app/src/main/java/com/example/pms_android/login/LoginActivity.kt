@@ -13,7 +13,10 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        login_back_button.setOnClickListener { finish() }
+        login_back_button.setOnClickListener {
+            start<MainLoginActivity>()
+            finish()
+        }
         login_button.setOnClickListener {
             checkStart()
         }
@@ -33,8 +36,8 @@ class LoginActivity : AppCompatActivity() {
                 if (login_autologin_checkbox.isChecked) {
                     correctInit(login_get_id.text.toString())
                 }
-                start<MainActivity>()
                 finish()
+
             } else {
                 Toast.makeText(applicationContext, "비밀번호를 입력해주세요", Toast.LENGTH_SHORT).show()
             }

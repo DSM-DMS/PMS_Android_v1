@@ -17,7 +17,10 @@ class SignupActivity : AppCompatActivity() {
         setContentView(R.layout.activity_signup)
         passwordCheckWatcher()
         passwordWatcher()
-        signup_back_button.setOnClickListener { finish() }
+        signup_back_button.setOnClickListener {
+            start<MainLoginActivity>()
+            finish()
+        }
         signup_button.setOnClickListener {
             checkStart()
         }
