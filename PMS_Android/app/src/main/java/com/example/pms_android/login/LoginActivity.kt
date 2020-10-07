@@ -3,10 +3,12 @@ package com.example.pms_android.login
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import com.example.pms_android.MainActivity
 import com.example.pms_android.R
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_signup.*
 import splitties.activities.start
 
 class LoginActivity : AppCompatActivity() {
@@ -32,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
     private fun checkStart() {
         if (login_get_id.text.toString().isNotEmpty()) {
             if (login_get_password.text.toString().isNotEmpty()) {
-//서버에 로그인 정보를 가져다 주는 부분
+        //서버에 로그인 정보를 가져다 주는 부분
                 if (login_autologin_checkbox.isChecked) {
                     correctInit(login_get_id.text.toString())
                 }
@@ -46,4 +48,5 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "아이디를 입력해주세요", Toast.LENGTH_SHORT).show()
         }
     }
+
 }

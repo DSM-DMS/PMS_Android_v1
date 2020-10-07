@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun readAutoLogin(): Boolean{
         val startShared = getSharedPreferences("auto_login", Context.MODE_PRIVATE)
-
         if(startShared.getString("get_id", "") ?: ""==""){
             return false
         }

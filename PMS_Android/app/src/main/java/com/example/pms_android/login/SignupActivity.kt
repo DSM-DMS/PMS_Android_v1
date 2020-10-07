@@ -1,9 +1,11 @@
 package com.example.pms_android.login
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import com.example.pms_android.R
 import kotlinx.android.synthetic.main.activity_signup.*
@@ -109,6 +111,7 @@ class SignupActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "id를 확인해주세요", Toast.LENGTH_SHORT).show()
         }
     }
+
 
 
 }
