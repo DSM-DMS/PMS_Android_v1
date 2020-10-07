@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.inputmethod.InputMethodManager
+import android.view.KeyEvent
+import android.view.View
 import android.widget.Toast
+import com.example.pms_android.KeyboardManager
 import com.example.pms_android.R
 import kotlinx.android.synthetic.main.activity_signup.*
 import splitties.activities.start
@@ -14,11 +16,13 @@ import splitties.activities.start
 class SignupActivity : AppCompatActivity() {
     var makePasswordCheck = false
     var checkPasswordCheck = false
+    val keyboard=KeyboardManager()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
         passwordCheckWatcher()
         passwordWatcher()
+        passwordInit()
         signup_back_button.setOnClickListener {
             start<MainLoginActivity>()
             finish()
@@ -57,7 +61,7 @@ class SignupActivity : AppCompatActivity() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 makeErrorCheck()
-                signup_get_password_layout.isPasswordVisibilityToggleEnabled = true
+                signup_get_password_layout.isPasswordVisibilityToggleEnabled = true// 공백,20자 이상 입력 불가 코드 만들기
             }
 
         }
@@ -65,14 +69,14 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun makeErrorCheck() {
-        if (signup_get_password.text.toString().length < 6) {
-            signup_get_password_layout.isErrorEnabled = true
-            signup_get_password_layout.error = "6자리이상으로 만들어주세요"
-            makePasswordCheck = false
-        } else {
+        if (signup_get_password.text.toString().length in 7..20) {
             signup_get_password_layout.isErrorEnabled = false
             signup_get_password_layout.error = null
             makePasswordCheck = true
+        } else {
+            signup_get_password_layout.isErrorEnabled = true
+            signup_get_password_layout.error = "비밀번호의 길이를 확인하세요"
+            makePasswordCheck = false
         }
     }
 
@@ -112,6 +116,14 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-
+    private fun passwordInit(){
+        signup_check_password.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+            if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                keyboard.hideKeyboard()
+                return@OnKeyListener true
+            }
+            false
+        })
+    }
 
 }

@@ -55,9 +55,9 @@
             android:drawableStart="@drawable/ic_baseline_edit_24"
             android:drawableLeft="@drawable/ic_baseline_edit_24"
             android:drawablePadding="16dp"
-            android:hint="닉네임을 입력해주세요"
+            android:hint="닉네임입력"
             android:inputType="textPersonName"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -80,7 +80,7 @@
             android:drawableEnd="@drawable/ic_baseline_done_24"
             android:drawableRight="@drawable/ic_baseline_done_24"
             android:drawablePadding="16dp"
-            android:hint="아이디를 입력해주세요"
+            android:hint="아이디입력"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -103,7 +103,7 @@
             android:drawableStart="@drawable/ic_baseline_lock_24"
             android:drawableLeft="@drawable/ic_baseline_lock_24"
             android:drawablePadding="16dp"
-            android:hint="비밀번호를 입력해주세요"
+            android:hint="비밀번호입력(7자이상,20자이하)"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -128,7 +128,8 @@
             android:drawableEnd="@drawable/ic_baseline_done_24"
             android:drawableRight="@drawable/ic_baseline_done_24"
             android:drawablePadding="16dp"
-            android:hint="비밀번호를 한번 더 입력해주세요"
+            android:hint="비밀번호재입력"
+            android:imeOptions="actionDone"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 

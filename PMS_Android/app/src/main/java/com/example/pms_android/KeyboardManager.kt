@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_signup.*
 
 class KeyboardManager:AppCompatActivity() {
-    private fun hideKeyboard() {
+    fun hideKeyboard() {
         val key = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         key.hideSoftInputFromWindow(signup_get_password.windowToken, 0)
     }
