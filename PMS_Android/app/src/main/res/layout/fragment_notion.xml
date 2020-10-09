@@ -62,16 +62,6 @@
         app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/notion_guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
-        app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/switch1" />
-
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
@@ -84,6 +74,7 @@
         tools:checked="false" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -113,5 +104,16 @@
             android:layout_weight="1"
             android:background="@drawable/ic_next_button" />
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/notion_guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
