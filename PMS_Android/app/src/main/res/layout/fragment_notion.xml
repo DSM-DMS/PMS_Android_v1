@@ -12,18 +12,28 @@
         android:layout_height="1dp"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.1" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/notion_guideline2"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/notion_guideline3"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/notion_guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+
 
     <TextView
         android:id="@+id/textView"
@@ -42,9 +52,10 @@
         android:background="#D9D7D7"
         android:drawableStart="@drawable/ic_baseline_search_24"
         android:drawableLeft="@drawable/ic_baseline_search_24"
-        android:ems="10"
         android:drawablePadding="16dp"
+        android:ems="10"
         android:hint="검색할 공지 제목을 입력하세요"
+        android:imeOptions="actionDone"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
         app:layout_constraintHorizontal_bias="1.0"
@@ -52,9 +63,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/notion_guideline4"
         app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
         app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
         app:layout_constraintTop_toBottomOf="@+id/switch1" />
@@ -69,5 +82,36 @@
         app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
         tools:checked="false" />
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
+        app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
+        app:layout_constraintTop_toTopOf="@+id/notion_guideline4">
+
+        <Button
+            android:id="@+id/notice_pre_btn"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_before_button" />
+
+        <TextView
+            android:id="@+id/notice_pageview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/notice_next_btn"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_next_button" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
