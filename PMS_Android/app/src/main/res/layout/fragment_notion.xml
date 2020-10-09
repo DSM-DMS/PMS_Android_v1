@@ -63,8 +63,11 @@
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Switch"
+        android:checked="false"
+        android:textOff="공지사항"
+        android:textOn="가정통신문"
         app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        tools:checked="false" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
