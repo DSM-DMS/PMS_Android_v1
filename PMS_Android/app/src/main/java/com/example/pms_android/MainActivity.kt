@@ -4,10 +4,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.pms_android.fragments.CalendarFragment
-import com.example.pms_android.fragments.InformationFragment
-import com.example.pms_android.fragments.NotionFragment
-import com.example.pms_android.fragments.IntroduceFragment
+import com.example.pms_android.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -42,6 +39,13 @@ class MainActivity : AppCompatActivity() {
                 supportFragmentManager.beginTransaction().replace(
                     R.id.container,
                     IntroduceFragment()
+                ).commit()
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.food_ic->{
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.container,
+                    FoodFragment()
                 ).commit()
                 return@OnNavigationItemSelectedListener true
             }
