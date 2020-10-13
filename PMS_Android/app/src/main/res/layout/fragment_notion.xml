@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/alert_show_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="false"
@@ -113,7 +113,7 @@
         app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/alert_show_switch"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
