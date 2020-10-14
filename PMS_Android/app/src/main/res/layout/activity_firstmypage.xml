@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Firstmypage">
+
+    <TextView
+        android:id="@+id/background"
+        android:layout_width="413dp"
+        android:layout_height="138dp"
+        android:layout_marginBottom="520dp"
+        android:background="#4C75B2"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="88dp"
+        android:layout_height="51dp"
+        android:drawableTint="#FFFFFF"
+        android:gravity="center"
+        android:text="도현맘"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186" />
+
+    <TextView
+        android:id="@+id/goodpoint"
+        android:layout_width="120dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/corner"
+        android:backgroundTint="@android:color/white"
+        android:gravity="center"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/badpoint"
+        android:layout_width="120dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginLeft="54dp"
+        android:background="@drawable/corner"
+
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintStart_toEndOf="@+id/goodpoint"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="벌점"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/badpoint"
+        app:layout_constraintEnd_toEndOf="@+id/badpoint"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="@+id/badpoint" />
+
+    <TextView
+        android:id="@+id/scoreright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="00"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/badpoint"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/badpoint"
+        app:layout_constraintTop_toTopOf="@+id/badpoint"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/scoreleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="00"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/goodpoint"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/goodpoint"
+        app:layout_constraintTop_toTopOf="@+id/goodpoint" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="상점"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/goodpoint"
+        app:layout_constraintEnd_toEndOf="@+id/goodpoint"
+        app:layout_constraintStart_toStartOf="@+id/goodpoint"
+        app:layout_constraintTop_toBottomOf="@+id/scoreleft"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="학생추가"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.665"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="17dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginRight="108dp"
+        android:src="@drawable/ic_baseline_create_24"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.632" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+        app:layout_constraintBottom_toTopOf="@+id/badpoint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/background"
+        app:layout_constraintVertical_bias="0.625" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
