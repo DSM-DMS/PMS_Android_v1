@@ -31,4 +31,23 @@
         app:layout_constraintEnd_toStartOf="@+id/calendar_guideline_right"
         app:layout_constraintStart_toStartOf="@+id/calendar_guideline_left"
         app:layout_constraintTop_toTopOf="@+id/calendar_guideline_top" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_calendar_text"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/calendar_guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/calendar_guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="날짜를 클릭하시면 일정을 볼수 있습니다." />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
