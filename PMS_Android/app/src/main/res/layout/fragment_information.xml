@@ -118,7 +118,7 @@
         app:layout_constraintTop_toBottomOf="@+id/name"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
+    <View
         android:id="@+id/background2"
         android:layout_width="355dp"
         android:layout_height="80dp"
