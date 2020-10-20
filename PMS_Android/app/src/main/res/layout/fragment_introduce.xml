@@ -6,14 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".fragments.IntroduceFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleGroup2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="introduce_fragment"
+        app:checkedButton="@id/btnA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:singleSelection="true">
+
+        <Button
+            android:id="@+id/btnA"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Android" />
+
+        <Button
+            android:id="@+id/btnS"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="Sunny" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

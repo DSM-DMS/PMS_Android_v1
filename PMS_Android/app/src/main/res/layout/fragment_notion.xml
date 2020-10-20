@@ -26,13 +26,13 @@
         android:layout_height="1dp"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.1" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/notion_guideline4"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.95" />
-
 
 
     <TextView
@@ -62,16 +62,6 @@
         app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:textOff="공지사항"
-        android:textOn="가정통신문"
-        app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        tools:checked="false" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -113,7 +103,15 @@
         app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/switch1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="fa"
+        android:textOn="af"
+        app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
