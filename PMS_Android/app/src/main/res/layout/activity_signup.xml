@@ -77,8 +77,6 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_baseline_perm_identity_24"
             android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
-            android:drawableEnd="@drawable/ic_baseline_done_24"
-            android:drawableRight="@drawable/ic_baseline_done_24"
             android:drawablePadding="16dp"
             android:hint="아이디입력"
             android:inputType="textPersonName" />
@@ -119,7 +117,7 @@
         app:layout_constraintStart_toStartOf="@+id/signup_guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/signup_get_password_layout">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.example.pms_android.customview.CheckPasswordEditText
             android:id="@+id/signup_check_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

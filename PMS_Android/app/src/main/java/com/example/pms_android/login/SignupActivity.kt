@@ -1,5 +1,6 @@
 package com.example.pms_android.login
 
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -7,19 +8,20 @@ import android.text.TextWatcher
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import com.example.pms_android.util.KeyboardManager
 import com.example.pms_android.R
+import com.example.pms_android.customview.CheckPasswordEditText.Companion.checkPasswordCheck
 import kotlinx.android.synthetic.main.activity_signup.*
 import splitties.activities.start
 
 class SignupActivity : AppCompatActivity() {
     var makePasswordCheck = false
-    var checkPasswordCheck = false
     val keyboard= KeyboardManager()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
-        passwordCheckWatcher()
         passwordWatcher()
         passwordInit()
         signup_back_button.setOnClickListener {
@@ -31,22 +33,6 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-    private fun passwordCheckWatcher() {
-        signup_check_password.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                checkErrorCheck()
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                signup_get_password_layout.isPasswordVisibilityToggleEnabled = false
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                checkErrorCheck()
-            }
-
-        })
-    }
 
     private fun passwordWatcher() {
         signup_get_password.addTextChangedListener(object : TextWatcher {
@@ -76,18 +62,6 @@ class SignupActivity : AppCompatActivity() {
             signup_get_password_layout.isErrorEnabled = true
             signup_get_password_layout.error = "비밀번호의 길이를 확인하세요"
             makePasswordCheck = false
-        }
-    }
-
-    private fun checkErrorCheck() {
-        if (signup_check_password.text.toString() != signup_check_password.text.toString()) {
-            signup_check_password_layout.isErrorEnabled = true
-            signup_check_password_layout.error = "비밀번호가 다릅니다"
-            checkPasswordCheck = false
-        } else {
-            signup_check_password_layout.isErrorEnabled = false
-            signup_check_password_layout.error = null
-            checkPasswordCheck = true
         }
     }
 
