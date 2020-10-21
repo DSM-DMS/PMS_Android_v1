@@ -66,7 +66,7 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun checkStart() {
-        if (signup_get_id.text.toString().length > 0) {
+        if (signup_get_id.text.toString().isNotEmpty()) {
             if (makePasswordCheck) {
                 if (checkPasswordCheck) {
                     if (signup_get_nickname.text.toString().isNotEmpty()) {

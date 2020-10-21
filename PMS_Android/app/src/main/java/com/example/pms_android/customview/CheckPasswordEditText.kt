@@ -7,17 +7,32 @@ import android.util.AttributeSet
 import android.view.View
 import androidx.annotation.NonNull
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
+import com.example.pms_android.R
 import kotlinx.android.synthetic.main.activity_signup.*
 import kotlinx.android.synthetic.main.activity_signup.view.*
 
-class CheckPasswordEditText:AppCompatEditText,TextWatcher {
+class CheckPasswordEditText(context: Context,attrs:AttributeSet) : AppCompatEditText(context,attrs),TextWatcher {
 
     companion object{
         var checkPasswordCheck = false
     }
-    constructor(context: Context):super(context)
-    constructor(context:Context,attrs: AttributeSet?):super(context,attrs)
-    constructor(context: Context,attrs:AttributeSet?,defStyleAttr:Int):super(context,attrs,defStyleAttr)
+    init{
+        context.theme.obtainStyledAttributes(
+            attrs,
+            R.styleable.CheckPasswordEditText,
+            0,0
+        ).apply {
+        try{
+
+        }
+        finally {
+
+        }
+        }
+    }
+
 
     private fun checkErrorCheck() {
         if (signup_check_password.text.toString() != signup_check_password.text.toString()) {
