@@ -14,8 +14,8 @@ import com.example.pms_android.R
 import kotlinx.android.synthetic.main.activity_signup.*
 import kotlinx.android.synthetic.main.activity_signup.view.*
 
-class CheckPasswordEditText(context: Context, attrs: AttributeSet) :
-    AppCompatEditText(context, attrs), TextWatcher {
+class CheckPasswordEditText(context: Context, attrs: AttributeSet?=null,defStyleAttr:Int=0) :
+    AppCompatEditText(context, attrs,defStyleAttr), TextWatcher {
     private var checkDrawble:Drawable = ContextCompat.getDrawable(getContext(),R.drawable.ic_baseline_done_24)!!
 
     companion object {

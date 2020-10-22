@@ -119,7 +119,7 @@
         app:layout_constraintStart_toStartOf="@+id/signup_guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/signup_get_password_layout">
 
-        <com.example.pms_android.customview.CheckPasswordEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/signup_check_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

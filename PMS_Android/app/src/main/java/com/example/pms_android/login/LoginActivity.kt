@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.example.pms_android.util.KeyboardManager
 import com.example.pms_android.R
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_signup.view.*
 import splitties.activities.start
 
 class LoginActivity : AppCompatActivity() {
@@ -24,6 +25,8 @@ class LoginActivity : AppCompatActivity() {
         login_button.setOnClickListener {
             checkStart()
         }
+        login_input_password.onFocusChangeListener= View.OnFocusChangeListener { v, hasFocus -> login_input_password_layout.isPasswordVisibilityToggleEnabled =
+            hasFocus }
     }
     private fun passwordInit(){
         login_input_password.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
