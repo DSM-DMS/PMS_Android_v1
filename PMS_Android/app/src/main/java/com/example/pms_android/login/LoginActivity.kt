@@ -25,11 +25,11 @@ class LoginActivity : AppCompatActivity() {
         login_button.setOnClickListener {
             checkStart()
         }
-        login_input_password.onFocusChangeListener= View.OnFocusChangeListener { v, hasFocus -> login_input_password_layout.isPasswordVisibilityToggleEnabled =
+        login_input_password.onFocusChangeListener= View.OnFocusChangeListener { _, hasFocus -> login_input_password_layout.isPasswordVisibilityToggleEnabled =
             hasFocus }
     }
     private fun passwordInit(){
-        login_input_password.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+        login_input_password.setOnKeyListener(View.OnKeyListener { _, keyCode, _ ->
             if (keyCode == KeyEvent.KEYCODE_ENTER) {
                 keyboard.hideKeyboard()
                 return@OnKeyListener true

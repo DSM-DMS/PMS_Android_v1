@@ -1,10 +1,12 @@
 package com.example.pms_android.login
 
+import android.graphics.Color
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
@@ -12,17 +14,27 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.example.pms_android.util.KeyboardManager
 import com.example.pms_android.R
-import com.example.pms_android.customview.CheckPasswordEditText.Companion.checkPasswordCheck
 import kotlinx.android.synthetic.main.activity_signup.*
 import splitties.activities.start
 
-class SignupActivity : AppCompatActivity() {
+class SignupActivity : AppCompatActivity(){
     var makePasswordCheck = false
-    val keyboard= KeyboardManager()
+    var checkPasswordCheck = false
+    private var checkDrawble: Drawable? = null
+
+    private var baseDrawble: Drawable? = null
+
+    val keyboard = KeyboardManager()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
+        checkDrawble=ContextCompat.getDrawable(applicationContext, R.drawable.ic_baseline_done_24)
+        baseDrawble=ContextCompat.getDrawable(applicationContext, R.drawable.ic_baseline_check_circle_outline_24)
+        baseDrawble?.setBounds(1,0, baseDrawble!!.intrinsicWidth, baseDrawble!!.intrinsicHeight)
+        checkDrawble?.setBounds(0, 0, checkDrawble!!.intrinsicWidth, checkDrawble!!.intrinsicHeight)
+        signup_check_password.setCompoundDrawables(baseDrawble, null, checkDrawble, null)
         passwordWatcher()
+        checkPasswordWatcher()
         passwordInit()
         signup_back_button.setOnClickListener {
             start<MainLoginActivity>()
@@ -31,6 +43,7 @@ class SignupActivity : AppCompatActivity() {
         signup_button.setOnClickListener {
             checkStart()
         }
+
     }
 
 
@@ -38,15 +51,32 @@ class SignupActivity : AppCompatActivity() {
         signup_get_password.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 makeErrorCheck()
+                signup_get_password_layout.isPasswordVisibilityToggleEnabled=true
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                signup_get_password_layout.isPasswordVisibilityToggleEnabled = true
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 makeErrorCheck()
-                signup_get_password_layout.isPasswordVisibilityToggleEnabled = true// 공백,20자 이상 입력 불가 코드 만들기
+                signup_get_password_layout.isPasswordVisibilityToggleEnabled=true
+            }
+
+        }
+        )
+    }
+
+    private fun checkPasswordWatcher() {
+        signup_check_password.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                checkErrorCheck()
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                checkErrorCheck()
             }
 
         }
@@ -62,6 +92,24 @@ class SignupActivity : AppCompatActivity() {
             signup_get_password_layout.isErrorEnabled = true
             signup_get_password_layout.error = "비밀번호의 길이를 확인하세요"
             makePasswordCheck = false
+        }
+    }
+
+    private fun checkErrorCheck() {
+        if (signup_get_password.text.toString() != signup_check_password.text.toString()&&makePasswordCheck) {
+            checkPasswordCheck = false
+            if (checkDrawble != null) {
+                DrawableCompat.setTint(checkDrawble!!, Color.RED)
+            }
+
+            signup_check_password_layout.error = "비밀번호가 다릅니다"
+        } else {
+            signup_check_password_layout.error = null
+            checkPasswordCheck = true
+            if(checkDrawble!=null){
+                DrawableCompat.setTint(checkDrawble!!,Color.GREEN)
+            }
+
         }
     }
 
@@ -89,8 +137,8 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-    private fun passwordInit(){
-        signup_check_password.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+    private fun passwordInit() {
+        signup_check_password.setOnKeyListener(View.OnKeyListener { _, keyCode, _ ->
             if (keyCode == KeyEvent.KEYCODE_ENTER) {
                 keyboard.hideKeyboard()
                 return@OnKeyListener true
@@ -98,5 +146,6 @@ class SignupActivity : AppCompatActivity() {
             false
         })
     }
+
 
 }
