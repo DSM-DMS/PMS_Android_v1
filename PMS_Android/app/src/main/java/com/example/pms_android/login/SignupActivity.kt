@@ -96,14 +96,14 @@ class SignupActivity : AppCompatActivity(){
     }
 
     private fun checkErrorCheck() {
-        if (signup_get_password.text.toString() != signup_check_password.text.toString()&&makePasswordCheck) {
+        if (signup_get_password.text.toString() != signup_check_password.text.toString()) {
             checkPasswordCheck = false
             if (checkDrawble != null) {
                 DrawableCompat.setTint(checkDrawble!!, Color.RED)
             }
 
             signup_check_password_layout.error = "비밀번호가 다릅니다"
-        } else {
+        } else if(signup_get_password.text.toString() == signup_check_password.text.toString()&&makePasswordCheck){
             signup_check_password_layout.error = null
             checkPasswordCheck = true
             if(checkDrawble!=null){

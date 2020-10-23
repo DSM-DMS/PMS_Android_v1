@@ -125,7 +125,8 @@
             android:layout_height="wrap_content"
             android:drawablePadding="16dp"
             android:hint="비밀번호 재입력"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:imeOptions="actionDone" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
