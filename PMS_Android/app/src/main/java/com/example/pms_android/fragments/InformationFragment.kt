@@ -17,8 +17,14 @@ class InformationFragment : androidx.fragment.app.Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        plusstudent.setOnClickListener{
+
+        }
+        
         return inflater.inflate(R.layout.fragment_information,container,false)
     }
+
 
 
 }
