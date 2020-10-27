@@ -5,17 +5,14 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.example.pms_android.fragments.CalendarFragment
-import com.example.pms_android.fragments.InformationFragment
-import com.example.pms_android.fragments.NotionFragment
-import com.example.pms_android.fragments.IntroduceFragment
+import com.example.pms_android.fragments.*
 import com.example.pms_android.login.MainLoginActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import splitties.activities.start
 
 class MainActivity : AppCompatActivity() {
-    var userId:String=""
+    var userId: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -42,16 +39,19 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.notion -> {
                 supportFragmentManager.beginTransaction().replace(
-                    R.id.container,
-                    NotionFragment()
+                    R.id.container,NotionFragment()
                 ).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.introduce -> {
                 supportFragmentManager.beginTransaction().replace(
-                    R.id.container,
-                    IntroduceFragment()
+                    R.id.container,IntroduceFragment()
                 ).commit()
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.food_ic -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.container, FoodFragment()).commit()
                 return@OnNavigationItemSelectedListener true
             }
             else -> {
@@ -60,9 +60,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun readAutoLogin(): Boolean{
+    private fun readAutoLogin(): Boolean {
         val startShared = getSharedPreferences("auto_login", Context.MODE_PRIVATE)
-        if(startShared.getString("get_id", "") ?: ""==""){
+        if (startShared.getString("get_id", "") ?: "" == "") {
             return false
         }
         return true

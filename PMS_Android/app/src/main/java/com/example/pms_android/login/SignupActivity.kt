@@ -150,6 +150,10 @@ class SignupActivity : AppCompatActivity() {
             false
         })
     }
-
+    override fun onBackPressed() {
+        start<MainLoginActivity>()
+        finish()
+        super.onBackPressed()
+    }
 
 }

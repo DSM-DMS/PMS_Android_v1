@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_signup.view.*
 import splitties.activities.start
 
 class LoginActivity : AppCompatActivity() {
-    val keyboard= KeyboardManager()
+    val keyboard = KeyboardManager()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -21,10 +21,13 @@ class LoginActivity : AppCompatActivity() {
         login_button.setOnClickListener {
             checkStart()
         }
-        login_input_password.onFocusChangeListener= View.OnFocusChangeListener { _, hasFocus -> login_input_password_layout.isPasswordVisibilityToggleEnabled =
-            hasFocus }
+        login_input_password.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            login_input_password_layout.isPasswordVisibilityToggleEnabled =
+                hasFocus
+        }
     }
-    private fun passwordInit(){
+
+    private fun passwordInit() {
         login_input_password.setOnKeyListener(View.OnKeyListener { _, keyCode, _ ->
             if (keyCode == KeyEvent.KEYCODE_ENTER) {
                 keyboard.hideKeyboard()
@@ -44,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
     private fun checkStart() {
         if (login_get_id.text.toString().isNotEmpty()) {
             if (login_input_password.text.toString().isNotEmpty()) {
-        //서버에 로그인 정보를 가져다 주는 부분
+                //서버에 로그인 정보를 가져다 주는 부분
                 if (login_autologin_checkbox.isChecked) {
                     correctInit(login_get_id.text.toString())
                 }
@@ -59,4 +62,9 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        start<MainLoginActivity>()
+        finish()
+        super.onBackPressed()
+    }
 }
