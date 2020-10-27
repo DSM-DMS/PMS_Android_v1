@@ -18,10 +18,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         passwordInit()
-        login_back_button.setOnClickListener {
-            start<MainLoginActivity>()
-            finish()
-        }
         login_button.setOnClickListener {
             checkStart()
         }

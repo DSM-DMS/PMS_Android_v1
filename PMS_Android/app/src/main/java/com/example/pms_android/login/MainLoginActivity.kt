@@ -12,11 +12,9 @@ class MainLoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main_login)
         mainlogin_button_startlogin.setOnClickListener {
             start<LoginActivity>()
-            finish()
         }
         mainlogin_button_startsignup.setOnClickListener {
             start<SignupActivity>()
-            finish()
         }
     }
 }

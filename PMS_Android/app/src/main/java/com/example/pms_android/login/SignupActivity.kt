@@ -14,10 +14,11 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.example.pms_android.util.KeyboardManager
 import com.example.pms_android.R
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_signup.*
 import splitties.activities.start
 
-class SignupActivity : AppCompatActivity(){
+class SignupActivity : AppCompatActivity() {
     var makePasswordCheck = false
     var checkPasswordCheck = false
     private var checkDrawble: Drawable? = null
@@ -28,20 +29,23 @@ class SignupActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
-        checkDrawble=ContextCompat.getDrawable(applicationContext, R.drawable.ic_baseline_done_24)
-        baseDrawble=ContextCompat.getDrawable(applicationContext, R.drawable.ic_baseline_check_circle_outline_24)
-        baseDrawble?.setBounds(1,0, baseDrawble!!.intrinsicWidth, baseDrawble!!.intrinsicHeight)
+        checkDrawble = ContextCompat.getDrawable(applicationContext, R.drawable.ic_baseline_done_24)
+        baseDrawble = ContextCompat.getDrawable(
+            applicationContext,
+            R.drawable.ic_baseline_check_circle_outline_24
+        )
+        baseDrawble?.setBounds(1, 0, baseDrawble!!.intrinsicWidth, baseDrawble!!.intrinsicHeight)
         checkDrawble?.setBounds(0, 0, checkDrawble!!.intrinsicWidth, checkDrawble!!.intrinsicHeight)
         signup_check_password.setCompoundDrawables(baseDrawble, null, checkDrawble, null)
         passwordWatcher()
         checkPasswordWatcher()
         passwordInit()
-        signup_back_button.setOnClickListener {
-            start<MainLoginActivity>()
-            finish()
-        }
         signup_button.setOnClickListener {
             checkStart()
+        }
+        signup_get_password.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            signup_get_password_layout.isPasswordVisibilityToggleEnabled =
+                hasFocus
         }
 
     }
@@ -51,7 +55,7 @@ class SignupActivity : AppCompatActivity(){
         signup_get_password.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 makeErrorCheck()
-                signup_get_password_layout.isPasswordVisibilityToggleEnabled=true
+                checkErrorCheck()
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -59,7 +63,7 @@ class SignupActivity : AppCompatActivity(){
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 makeErrorCheck()
-                signup_get_password_layout.isPasswordVisibilityToggleEnabled=true
+                checkErrorCheck()
             }
 
         }
@@ -103,11 +107,11 @@ class SignupActivity : AppCompatActivity(){
             }
 
             signup_check_password_layout.error = "비밀번호가 다릅니다"
-        } else if(signup_get_password.text.toString() == signup_check_password.text.toString()&&makePasswordCheck){
+        } else if (signup_get_password.text.toString() == signup_check_password.text.toString() && makePasswordCheck) {
             signup_check_password_layout.error = null
             checkPasswordCheck = true
-            if(checkDrawble!=null){
-                DrawableCompat.setTint(checkDrawble!!,Color.GREEN)
+            if (checkDrawble != null) {
+                DrawableCompat.setTint(checkDrawble!!, Color.GREEN)
             }
 
         }

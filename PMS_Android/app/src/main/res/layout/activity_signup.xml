@@ -143,13 +143,4 @@
         app:layout_constraintStart_toStartOf="@+id/signup_guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/signup_check_password_layout" />
 
-    <Button
-        android:id="@+id/signup_back_button"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:background="@drawable/ic_baseline_cancel_24"
-        app:layout_constraintEnd_toStartOf="@+id/signup_guideline_right"
-        app:layout_constraintTop_toTopOf="@+id/signup_guideline_top"
-        />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
