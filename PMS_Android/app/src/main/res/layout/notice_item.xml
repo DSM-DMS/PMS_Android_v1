@@ -5,6 +5,7 @@
     android:id="@+id/list"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#903F2B2B"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -19,7 +20,7 @@
             android:id="@+id/repo_list"
             android:layout_width="match_parent"
             android:layout_height="90dp"
-            android:background="@drawable/ic_notice_item">
+            android:background="@drawable/corner">
 
             <TextView
                 android:id="@+id/textView4"

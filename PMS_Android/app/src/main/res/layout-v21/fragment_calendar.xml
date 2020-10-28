@@ -5,21 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.CalendarFragment">
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/calendar_guideline_left"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.05" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/calendar_guideline_right"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.95" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/calendar_guideline_top"
         android:layout_width="wrap_content"
@@ -50,8 +47,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:elevation="10dp"
             android:gravity="center"
+            android:elevation="10dp"
             android:text="날짜를 클릭하시면 일정을 볼수 있습니다." />
 
     </LinearLayout>
