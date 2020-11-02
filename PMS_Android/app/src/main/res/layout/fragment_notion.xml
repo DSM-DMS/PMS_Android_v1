@@ -95,17 +95,7 @@
             android:background="@drawable/ic_next_button" />
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/notion_guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/switch1" />
-
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -113,5 +103,15 @@
         android:textOn="af"
         app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
+        app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        tools:listitem="@layout/notice_item"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
