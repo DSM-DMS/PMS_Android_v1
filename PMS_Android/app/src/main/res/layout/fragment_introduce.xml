@@ -61,7 +61,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintVertical_bias="0.073" >
+
+        <TextView
+            android:id="@+id/club"
+            android:layout_width="136dp"
+            android:layout_height="58dp"
+            android:text="동아리 소개"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="30dp"
+
+
+            android:text="대마고의 동아리를 소개합니다" />
+
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
