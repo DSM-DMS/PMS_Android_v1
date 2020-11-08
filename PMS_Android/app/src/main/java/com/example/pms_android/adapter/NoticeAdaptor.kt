@@ -1,4 +1,4 @@
-package com.example.pms_android.adaptor
+package com.example.pms_android.adapter
 
 import android.view.View
 import android.widget.LinearLayout
