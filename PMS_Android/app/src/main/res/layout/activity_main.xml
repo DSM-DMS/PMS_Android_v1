@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         app:itemIconTint="@drawable/item_color"
-        app:itemTextColor="#4C75B2"
+        app:itemTextColor="@drawable/item_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
