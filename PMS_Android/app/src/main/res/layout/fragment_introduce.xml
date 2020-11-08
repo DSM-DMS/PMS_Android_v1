@@ -4,33 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".fragments.IntroduceFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="312dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/corner"
-        android:backgroundTint="#FCFCFC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="312dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/corner"
-        android:backgroundTint="#FCFCFC"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview2"
+        android:layout_width="321dp"
+        android:layout_height="101dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardview3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/cardview1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview3"
+        android:layout_width="321dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="116dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
@@ -50,32 +46,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textColor="#4C75B2"
         android:text="대마고의 자랑거리를 소개합니다"
+        android:textColor="#4C75B2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="312dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="56dp"
-        android:background="@drawable/corner"
-        android:backgroundTint="#FCFCFC"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview1"
+        android:layout_width="321dp"
+        android:layout_height="101dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.073" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="4dp"
-        android:layout_height="31dp"
-        android:background="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        tools:layout_editor_absoluteY="215dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
