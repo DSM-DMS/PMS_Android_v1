@@ -1,10 +1,12 @@
 package com.example.pms_android
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,6 +36,19 @@ class CodeDialog_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        //Alert Dialog 기본 버전
+        /*AlertDialog.Builder(this)
+            .setTitle("자녀확인코드를 입력해주세요")
+            .setPositiveButton("확인") { _, _->
+                Toast.makeText(this,"확인",Toast.LENGTH_SHORT).show()
+            }.setNegativeButton("취소") {_, _ ->
+                Toast.makeText(this,"취소",Toast.LENGTH_SHORT).show()
+            }.show()*/
+
+
+
+
+
 
         return inflater.inflate(R.layout.fragment_code_dialog_, container, false)
     }
