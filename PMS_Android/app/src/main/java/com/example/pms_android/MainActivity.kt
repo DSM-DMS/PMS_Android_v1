@@ -1,9 +1,8 @@
 package com.example.pms_android
 
-import android.content.Context
-import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+
 import android.util.Log
 import com.example.pms_android.fragments.*
 import com.example.pms_android.login.MainLoginActivity
@@ -16,11 +15,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         if (!readAutoLogin()) {
             start<MainLoginActivity>()
         }
         supportFragmentManager.beginTransaction().replace(R.id.container, CalendarFragment())
             .commit()
+      
         bottom_navigation.setOnNavigationItemSelectedListener(itemListener)
 
     }
@@ -29,12 +30,16 @@ class MainActivity : AppCompatActivity() {
         when (it.itemId) {
             R.id.calendar -> {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, CalendarFragment()).commit()
+                    .replace(R.id.container,
+                        CalendarFragment()
+                    ).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.information -> {
                 supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, InformationFragment()).commit()
+                    .replace(R.id.container,
+                        InformationFragment()
+                    ).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.notion -> {
