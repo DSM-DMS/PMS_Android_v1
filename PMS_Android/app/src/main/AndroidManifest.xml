@@ -12,8 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".passwordActivity"></activity>
-        <activity android:name=".fragments.Firstmypage" />
+        <activity android:name=".passwordActivity"/>
         <activity android:name=".login.SignupActivity"/>
 
         <activity android:name=".login.MainLoginActivity" />
