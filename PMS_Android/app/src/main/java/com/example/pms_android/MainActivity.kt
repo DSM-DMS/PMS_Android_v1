@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import com.example.pms_android.adaptor.OnNoticeItemClick
 import com.example.pms_android.fragments.CalendarFragment
 import com.example.pms_android.fragments.InformationFragment
 import com.example.pms_android.fragments.NotionFragment
@@ -49,9 +51,4 @@ class MainActivity : AppCompatActivity() {
             }
         }}
 
-
-
-
 }
-
-

@@ -54,13 +54,14 @@
         android:drawableLeft="@drawable/ic_baseline_search_24"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="검색할 공지 제목을 입력하세요"
-        android:imeOptions="actionDone"
+        android:hint="검색할 문서 제목을 입력하세요"
+        android:imeOptions="actionSearch"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toStartOf="@+id/notion_guideline2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/notion_guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:autofillHints="공지사항" />
 
 
     <LinearLayout
