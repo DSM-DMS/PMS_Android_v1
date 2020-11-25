@@ -1,10 +1,12 @@
 package com.example.pms_android
 
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.pms_android.adaptor.Notice
 import com.example.pms_android.adaptor.OnNoticeItemClick
 import com.example.pms_android.fragments.CalendarFragment
 import com.example.pms_android.fragments.InformationFragment
@@ -12,8 +14,9 @@ import com.example.pms_android.fragments.NotionFragment
 import com.example.pms_android.fragments.IntroduceFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
+import splitties.activities.start
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),OnNoticeItemClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -51,4 +54,7 @@ class MainActivity : AppCompatActivity() {
             }
         }}
 
+    override fun onClick() {
+        start<NoticeDetailActivity>()
+    }
 }

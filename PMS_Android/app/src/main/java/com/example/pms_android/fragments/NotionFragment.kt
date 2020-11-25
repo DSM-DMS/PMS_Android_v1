@@ -1,18 +1,21 @@
 package com.example.pms_android.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.pms_android.NoticeDetailActivity
 import com.example.pms_android.R
 import com.example.pms_android.adaptor.Notice
 import com.example.pms_android.adaptor.NoticeAdaptor
+import com.example.pms_android.adaptor.OnNoticeItemClick
 import kotlinx.android.synthetic.main.fragment_notion.*
 import kotlinx.android.synthetic.main.fragment_notion.view.*
 
-class NotionFragment : Fragment() {
+class NotionFragment : Fragment(), OnNoticeItemClick{
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,8 +36,16 @@ class NotionFragment : Fragment() {
         test.addItem(Notice("정처기 시험치자","2020.11.28"))
         test.addItem(Notice("밥먹자","2020.11.26"))
         test.notifyDataSetChanged()
+        test.setItemClickListener(this)
         notice_recyclerview.layoutManager = LinearLayoutManager(requireActivity())
 
     }
+
+    override fun onClick() {
+        val intent = Intent(requireActivity(),NoticeDetailActivity::class.java)
+        startActivity(intent)
+    }
+
+
 }
 
