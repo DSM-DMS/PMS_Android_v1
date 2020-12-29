@@ -1,9 +1,8 @@
-package com.example.pms_android
+package com.example.pms_android.Activity
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.fragment_introduce.*
+import com.example.pms_android.R
 
 class IntroduceclubActivity : AppCompatActivity() {
 
