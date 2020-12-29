@@ -1,9 +1,8 @@
-package com.example.pms_android
+package com.example.pms_android.Activity
 
-import android.content.Context
-import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pms_android.R
 import com.example.pms_android.fragments.CalendarFragment
 import com.example.pms_android.fragments.InformationFragment
 import com.example.pms_android.fragments.NotionFragment
