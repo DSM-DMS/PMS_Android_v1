@@ -4,13 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.pms_android.R
 
-class IntroduceclubActivity : AppCompatActivity() {
+class IntroduceClubActivity : AppCompatActivity() {
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_introduceclub)
+        setContentView(R.layout.activity_introduce_club)
     }
 }
