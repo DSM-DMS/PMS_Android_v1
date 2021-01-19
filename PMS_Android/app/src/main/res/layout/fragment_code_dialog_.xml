@@ -10,7 +10,6 @@
         android:id="@+id/textView5"
         android:layout_width="355dp"
         android:layout_height="189dp"
-        android:
         android:background="@drawable/corner"
         android:backgroundTint="#FFFFFF"
         android:gravity="center_horizontal"
