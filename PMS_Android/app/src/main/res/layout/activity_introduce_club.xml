@@ -14,12 +14,19 @@
         android:background="#F6F6F6"
         android:gravity="center"
         android:text="동아리 소개"
-       android:textSize="20dp"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/club_tv"
+        app:layout_constraintTop_toTopOf="@+id/club_tv"
+        app:layout_constraintVertical_bias="0.49"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        tools:layout_editor_absoluteX="27dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
