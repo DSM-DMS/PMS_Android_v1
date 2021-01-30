@@ -44,11 +44,7 @@ class CodeDialog_Fragment : Fragment() {
             }.show()*/
 
 
-
-
-
-
-        return inflater.inflate(R.layout.studentcheck_code_dialog_, container, false)
+        return inflater.inflate(R.layout.student_code_dialog, container, false)
     }
 
     companion object {

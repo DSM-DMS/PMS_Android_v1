@@ -1,4 +1,4 @@
-package com.example.pms_android.adapter
+package com.example.pms_android.Notice
 
 import android.view.View
 import android.widget.LinearLayout

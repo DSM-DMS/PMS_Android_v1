@@ -1,5 +1,6 @@
 package com.example.pms_android
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
@@ -55,8 +56,9 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.food_ic -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, FoodFragment()).commit()
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.container,FoodFragment()
+                ).commit()
                 return@OnNavigationItemSelectedListener true
             }
             else -> {
