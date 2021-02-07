@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fragments.FoodFragment"></activity>
+        <activity android:name=".Recycler.OutingActivity"></activity>
+        <activity android:name=".fragments.FoodFragment" />
         <activity android:name=".Recycler.PointActivity" />
         <activity android:name=".mypage.MypageActivity" />
         <activity android:name=".mypage.PasswordActivity" />
