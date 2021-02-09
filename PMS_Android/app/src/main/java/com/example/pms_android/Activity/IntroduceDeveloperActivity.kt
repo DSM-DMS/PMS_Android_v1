@@ -17,18 +17,22 @@ class IntroduceDeveloperActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setContentView(R.layout.activity_introduce_developer)
 
-
-        //뒤로가기 버트
-        imageView9.setOnClickListener() {
+        //돌아가기버튼
+        back_btn.setOnClickListener(){
             startActivity(Intent(this, IntroduceFragment::class.java))
             finish()
-
         }
+
         var devList = arrayListOf<Developer>(
-            Developer("이은별","Android","eunbyul"),
             Developer("김재원","Android","jaewon"),
+            Developer("이은별","Android","eunbyul"),
+            Developer("정고은","Ios(PM)",""),
+            Developer("","",""),
+            Developer("김정빈","Server","jungbin"),
+            Developer("정지우","Server","jiwoo"),
             Developer("강은빈","Front","eunbin"),
-            Developer("정고은","Ios","")
+            Developer("이진우","Front","")
+
         )
 
         super.onCreate(savedInstanceState)
@@ -37,14 +41,10 @@ class IntroduceDeveloperActivity : AppCompatActivity() {
         val mAdapter = Develop_Adapter(this, devList)
         rv_data_list.adapter = mAdapter
 
-        val lm = LinearLayoutManager(this)
+        val lm = GridLayoutManager(this,2)
         rv_data_list.layoutManager = lm
         rv_data_list.setHasFixedSize(true)
-    }
+         }
 
 
     }
-
-
-
-}

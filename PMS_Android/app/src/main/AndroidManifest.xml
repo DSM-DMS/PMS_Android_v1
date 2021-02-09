@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".introduce_detail.Introduce_Club_Detail_Activity"></activity>
+        <activity android:name=".Activity.IntroduceMainActivity"></activity>
+        <activity android:name=".introduce_detail.Introduce_Club_Detail_Activity" />
         <activity android:name=".Activity.IntroduceCompanyActivity" />
         <activity android:name=".Activity.IntroduceDeveloperActivity" />
         <activity android:name=".passwordActivity" />
