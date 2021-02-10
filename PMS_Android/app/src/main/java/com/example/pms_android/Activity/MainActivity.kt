@@ -1,13 +1,13 @@
-package com.example.pms_android
+package com.example.pms_android.Activity
 
-import android.content.Context
-import android.content.pm.PackageManager
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pms_android.R
 import com.example.pms_android.fragments.CalendarFragment
 import com.example.pms_android.fragments.InformationFragment
-import com.example.pms_android.fragments.NotionFragment
 import com.example.pms_android.fragments.IntroduceFragment
+import com.example.pms_android.fragments.NotionFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -32,23 +32,21 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.notion -> {
-                supportFragmentManager.beginTransaction().replace(
-                    R.id.container,
-                    NotionFragment()
-                ).commit()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.container, NotionFragment()).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.introduce -> {
-                supportFragmentManager.beginTransaction().replace(
-                    R.id.container,
-                    IntroduceFragment()
-                ).commit()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.container, IntroduceFragment()).commit()
                 return@OnNavigationItemSelectedListener true
             }
             else ->{
                 return@OnNavigationItemSelectedListener false
             }
+
         }}
+
 
 
 

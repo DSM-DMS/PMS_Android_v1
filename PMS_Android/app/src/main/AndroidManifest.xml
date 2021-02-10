@@ -11,14 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".passwordActivity"/>
-        <activity android:name=".login.SignupActivity"/>
-
+        <activity android:name=".Activity.IntroduceMainActivity"></activity>
+        <activity android:name=".introduce_detail.Introduce_Club_Detail_Activity" />
+        <activity android:name=".Activity.IntroduceCompanyActivity" />
+        <activity android:name=".Activity.IntroduceDeveloperActivity" />
+        <activity android:name=".passwordActivity" />
+        <activity android:name=".fragments.Firstmypage" />
+        <activity android:name=".login.SigninActivity" />
         <activity android:name=".login.MainLoginActivity" />
         <activity android:name=".login.LoginActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

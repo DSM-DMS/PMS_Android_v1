@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".introduce_detail.Introduce_Club_Detail_Activity">
+
+
+    <TextView
+        android:id="@+id/club_detail_tv"
+        android:layout_width="419dp"
+        android:layout_height="79dp"
+        android:background="#F6F6F6"
+        android:gravity="center"
+        android:text="이제 여기에 동아리 설명란"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
