@@ -43,9 +43,9 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.food_ic->{
-                supportFragmentManager.beginTransaction().replace(
-                    R.id.container,
-                    FoodFragment()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.container,MealFragment()
+
                 ).commit()
                 return@OnNavigationItemSelectedListener true
             }

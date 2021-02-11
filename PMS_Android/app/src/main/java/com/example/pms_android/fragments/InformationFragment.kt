@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
 import com.example.pms_android.R
-import com.example.pms_android.login.MainLoginActivity
+//import com.example.pms_android.login.MainLoginActivity
 import kotlinx.android.synthetic.main.fragment_information.*
 
 
