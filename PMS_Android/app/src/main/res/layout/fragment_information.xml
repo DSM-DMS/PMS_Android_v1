@@ -8,45 +8,6 @@
 
 
     <TextView
-        android:id="@+id/background6"
-        android:layout_width="356dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="15dp"
-        android:visibility="invisible"
-        android:background="@drawable/dialog_back"
-        android:backgroundTint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/background5" />
-
-    <View
-        android:id="@+id/background5"
-        android:layout_width="356dp"
-        android:layout_height="69dp"
-        android:visibility="invisible"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/dialog_back"
-        android:backgroundTint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/background4" />
-
-    <View
-        android:id="@+id/background4"
-        android:layout_width="356dp"
-        android:layout_height="69dp"
-        android:visibility="invisible"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/dialog_back"
-        android:backgroundTint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/background2" />
-
-    <TextView
         android:id="@+id/background"
         android:layout_width="413dp"
         android:layout_height="138dp"
@@ -76,22 +37,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.186" />
 
-    <TextView
-        android:id="@+id/name3"
-        android:layout_width="353dp"
-        android:layout_height="37dp"
-        android:background="@drawable/dialog_back"
-        android:backgroundTint="#4C75B2"
-        android:gravity="center"
-        android:text="3차 봉사중 입니다"
-        android:textColor="@android:color/white"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275" />
 
     <TextView
         android:id="@+id/goodpoint"
@@ -122,20 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/name"
         app:layout_constraintVertical_bias="0.0" />
 
-    <View
-        android:id="@+id/background2"
-        android:layout_width="355dp"
-        android:visibility="invisible"
-        android:layout_height="80dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
-        android:background="@drawable/dialog_back"
-        android:backgroundTint="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.659"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name3" />
+\
 
     <TextView
         android:id="@+id/textView3"
@@ -195,83 +127,8 @@
         app:layout_constraintTop_toBottomOf="@+id/scoreleft"
         app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="12dp"
-        android:text="주말급식 신청 여부"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/background2"
-        app:layout_constraintStart_toStartOf="@+id/background2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="12dp"
-        android:text="이번주 잔류 상태"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/background2"
-        app:layout_constraintStart_toStartOf="@+id/background2"
-        app:layout_constraintTop_toTopOf="@+id/background2"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:text="외출내역 보기"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/background4"
-        app:layout_constraintStart_toStartOf="@+id/background4"
-        app:layout_constraintTop_toTopOf="@+id/background4"
-        app:layout_constraintVertical_bias="0.52" />
-
-    <TextView
-        android:id="@+id/passwordchange"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:visibility="invisible"
-        android:text="비밀번호 변경"
-        app:layout_constraintBottom_toBottomOf="@+id/background5"
-        app:layout_constraintStart_toStartOf="@+id/background5"
-        app:layout_constraintTop_toTopOf="@+id/background5" />
-
-    <TextView
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:visibility="invisible"
-        android:layout_marginLeft="20dp"
-        android:text="로그아웃"
-        app:layout_constraintBottom_toBottomOf="@+id/background6"
-        app:layout_constraintStart_toStartOf="@+id/background6"
-        app:layout_constraintTop_toTopOf="@+id/background6" />
-
-    <ImageView
-        android:id="@+id/logoutbutton"
-        android:layout_width="wrap_content"
-        android:visibility="invisible"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paawordchangebutton"
-        app:layout_constraintVertical_bias="0.315" />
 
     <ImageView
         android:id="@+id/outingbutton"
@@ -373,17 +230,6 @@
         android:layout_centerInParent="true"
         app:layout_constraintTop_toBottomOf="@+id/background" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        app:itemIconTint="@drawable/item_color"
-        app:itemTextColor="#4C75B2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu" />
 
 
 

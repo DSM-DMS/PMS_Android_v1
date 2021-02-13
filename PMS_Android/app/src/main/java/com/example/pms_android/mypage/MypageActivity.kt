@@ -30,6 +30,17 @@ class MypageActivity : AppCompatActivity() {
                 startActivity(intent);
             }
 
+          //상벌점으로 들어가기
+         goodpoint.setOnClickListener{
+             val intent=Intent(this,PointActivity::class.java)
+             startActivity(intent)
+         }
+
+          badpoint.setOnClickListener{
+                val intent=Intent(this,PointActivity::class.java)
+                startActivity(intent)
+            }
+
 
 
 

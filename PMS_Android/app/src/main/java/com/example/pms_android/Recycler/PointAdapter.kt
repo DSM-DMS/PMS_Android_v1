@@ -29,6 +29,8 @@ RecyclerView.Adapter<PointAdapter.Holder>(){
 
 
 
+
+
     inner class Holder (itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val reason = itemView?.findViewById<TextView>(R.id.reason_point1)
