@@ -10,11 +10,10 @@ class PasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_password)
 
-        //비밀번호 재설정
-        Check_btn.setOnClickListener{
+
+        Check_btn.setOnClickListener(){
 
         }
-
 
     }
 }
