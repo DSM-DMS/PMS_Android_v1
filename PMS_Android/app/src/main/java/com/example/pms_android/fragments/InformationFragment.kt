@@ -3,6 +3,8 @@ package com.example.pms_android.fragments
 import android.app.Fragment
 import android.content.Intent
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.KeyEvent.KEYCODE_ENTER
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.inflate
@@ -30,11 +32,15 @@ class InformationFragment : androidx.fragment.app.Fragment() {
             return inflater.inflate(R.layout.fragment_information, container, false)
 
 
+            //학생 이름을 추가하고 확인을 누구면  해당학생의 상세페이지로 넘어간다
+            plusstudent.setOnKeyListener { v, keyCode, event ->
+                if (event.action == KeyEvent.ACTION_DOWN && keyCode == KEYCODE_ENTER) {
+                    // 엔터 눌렀을때 행동
+                    
 
-            //학생 추가를 누르면 액티비티로 넘어간다
-            plusstudent.setOnClickListener() {
-                val intent = Intent(getActivity(), MainActivity::class.java)
-                startActivity(intent)
+                }
+
+                true
             }
         }
 
