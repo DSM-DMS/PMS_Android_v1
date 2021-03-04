@@ -1,3 +1,9 @@
 package com.example.pms_android.API
 
-data class API(val newpassword : String)
+interface API{
+
+
+    //여기에 API 정리한다.
+    //@PUT("")
+    //fun put
+}
