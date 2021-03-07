@@ -19,16 +19,8 @@ import kotlinx.android.synthetic.main.fragment_information.*
 
 
 class InformationFragment : androidx.fragment.app.Fragment() {
-<<<<<<< HEAD
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
 
-    ): View? {
 
-        plusstudent.setOnClickListener{
-=======
->>>>>>> mypage
 
         override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -37,14 +29,6 @@ class InformationFragment : androidx.fragment.app.Fragment() {
             // Inflate the layout for this fragment
             return inflater.inflate(R.layout.fragment_information, container, false)
         }
-<<<<<<< HEAD
-        
-        return inflater.inflate(R.layout.fragment_information,container,false)
-
-
-
-=======
->>>>>>> mypage
     }
 
 
