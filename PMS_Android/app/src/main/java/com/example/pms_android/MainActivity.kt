@@ -1,7 +1,10 @@
 package com.example.pms_android
 
 import android.content.Context
+<<<<<<< HEAD
 import android.content.pm.PackageManager
+=======
+>>>>>>> mypage
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.pms_android.fragments.CalendarFragment
@@ -45,7 +48,17 @@ class MainActivity : AppCompatActivity() {
                 ).commit()
                 return@OnNavigationItemSelectedListener true
             }
+<<<<<<< HEAD
             else ->{
+=======
+            R.id.food_ic -> {
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.container,FoodFragment()
+                ).commit()
+                return@OnNavigationItemSelectedListener true
+            }
+            else -> {
+>>>>>>> mypage
                 return@OnNavigationItemSelectedListener false
             }
         }}
