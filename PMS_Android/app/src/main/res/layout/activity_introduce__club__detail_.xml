@@ -8,14 +8,165 @@
 
 
     <TextView
-        android:id="@+id/club_detail_tv"
+        android:id="@+id/club_tv"
         android:layout_width="419dp"
         android:layout_height="79dp"
         android:background="#F6F6F6"
         android:gravity="center"
-        android:text="이제 여기에 동아리 설명란"
+        android:text="DMS"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/club_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/club_tv"
+        app:layout_constraintVertical_bias="0.49"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="277dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <View
+
+        android:id="@+id/view2"
+        android:layout_width="350dp"
+        android:layout_height="2px"
+        android:layout_marginTop="16dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10">
+
+    </View>
+
+    <View
+
+        android:id="@+id/view"
+        android:layout_width="350dp"
+        android:layout_height="2px"
+        android:layout_marginTop="20dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/club_tv">
+
+    </View>
+
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="DMS"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardview_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.375" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_first"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="12dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardview_second"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="30dp"
+            android:background="#4C75B2"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동아리 소개"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="12dp"
+            />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="53dp"
+            android:text="대마고의 여러 시스템을 개발합니다" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_second"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="25dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="30dp"
+            android:background="#4C75B2"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동아리 인원"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="18dp"
+            />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="53dp"
+            android:text="부장 - 이성진" />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
