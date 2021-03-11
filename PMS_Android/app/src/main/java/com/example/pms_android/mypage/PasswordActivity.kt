@@ -11,9 +11,13 @@ class PasswordActivity : AppCompatActivity() {
         setContentView(R.layout.activity_password)
 
 
-        Check_btn.setOnClickListener(){
+        //현재 비밀번호가 맞는지 확인
 
-        }
+
+
+
+
+        // 새로운 비밀번호 작성 + 한번 더 확인
 
     }
 }

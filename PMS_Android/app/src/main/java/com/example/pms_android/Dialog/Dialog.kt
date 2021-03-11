@@ -1,24 +1,30 @@
 package com.example.pms_android.Dialog
 
-import android.content.Context
-import com.example.pms_android.R
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.DialogFragment
+import com.example.pms_android.databinding.StudentCodeDialogBinding
 
-class Dialog(context: Context) {
-    private val dialog = Dialog(context)
+class Dialog : DialogFragment() {
 
-    fun MyDig() {
-        dialog.show()
+    lateinit var binding : StudentCodeDialogBinding
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = StudentCodeDialogBinding.inflate(inflater,container,false)
 
-        dialog.setContentView(R.layout.student_code_dialog)
+        
 
-
-        //Dialog 사이즈 설정
-        dialog.window!!.setLayout(windowManager.LayoutParams.MATCH_PARENT,
-            windowManager.LayoutParams.WRAP_CONTENT)
-        dialog.setCanceledOnTouchOutside(true)
-        dialog.setCancelable(true)
-
+        return binding .root
     }
+
+
+
+
 }
 
