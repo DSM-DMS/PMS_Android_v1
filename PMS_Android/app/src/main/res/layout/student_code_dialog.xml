@@ -8,6 +8,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/check_dialog"
         android:layout_width="325dp"
         android:layout_height="186dp"
         android:background="#FFFFFF"
@@ -19,7 +20,7 @@
         app:layout_constraintVertical_bias="0.498">
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/dialog_rt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="72dp"
@@ -35,7 +36,7 @@
             app:layout_constraintVertical_bias="0.391" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/dialog_lt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="72dp"
@@ -63,7 +64,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/check_student_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
@@ -75,7 +76,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/textView16"
+            android:id="@+id/student_check_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="                       "

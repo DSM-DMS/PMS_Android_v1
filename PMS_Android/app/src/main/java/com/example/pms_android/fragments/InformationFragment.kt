@@ -24,7 +24,10 @@ class InformationFragment : androidx.fragment.app.Fragment() {
 
             binding.plusstudent.setOnClickListener(){
 
-                
+                //Dialog를 띄워준다.
+
+
+
             }
 
             return binding .root
