@@ -7,6 +7,21 @@
     tools:context=".Activity.IntroduceClubActivity">
 
 
+    <View
+
+        android:id="@+id/view3"
+        android:layout_width="250dp"
+        android:layout_height="2px"
+        android:background="#F6F6F6"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/club_tv"
+        app:layout_constraintVertical_bias="0.895">
+
+    </View>
+
     <TextView
         android:id="@+id/club_tv"
         android:layout_width="419dp"
@@ -22,11 +37,32 @@
         android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/club_tv"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/club_tv"
         app:layout_constraintVertical_bias="0.49"
-        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
-        tools:layout_editor_absoluteX="27dp" />
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="410dp"
+        android:layout_height="329dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="자녀의 동아리"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/club_tv" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
