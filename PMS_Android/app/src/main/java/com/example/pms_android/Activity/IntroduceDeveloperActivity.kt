@@ -1,10 +1,9 @@
 package com.example.pms_android.Activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pms_android.Develop_Recycler.Develop_Adapter
 import com.example.pms_android.Develop_Recycler.Developer
 import com.example.pms_android.R
@@ -26,12 +25,12 @@ class IntroduceDeveloperActivity : AppCompatActivity() {
         var devList = arrayListOf<Developer>(
             Developer("김재원","Android","jaewon"),
             Developer("이은별","Android","eunbyul"),
-            Developer("정고은","Ios(PM)",""),
-            Developer("","",""),
-            Developer("김정빈","Server","jungbin"),
-            Developer("정지우","Server","jiwoo"),
+            Developer("정고은","iOS(PM)","goeun"),
+            //Developer("","","logo"),
+            Developer("김정빈","Server","jungbin2"),
+            Developer("정지우","Server","jiwoo2"),
             Developer("강은빈","Front","eunbin"),
-            Developer("이진우","Front","")
+            Developer("이진우","Front","jinwoo")
 
         )
 
