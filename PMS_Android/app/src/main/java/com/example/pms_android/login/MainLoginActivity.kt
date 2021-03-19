@@ -23,7 +23,10 @@ class MainLoginActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-
         super.onBackPressed()
+        moveTaskToBack(true)
+        finish()
+        android.os.Process.killProcess(android.os.Process.myPid())
+
     }
 }
