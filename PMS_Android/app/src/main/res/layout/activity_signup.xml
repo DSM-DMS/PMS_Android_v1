@@ -81,7 +81,8 @@
             android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
             android:drawablePadding="16dp"
             android:hint="아이디입력"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:windowSoftInputMode="adjustResize"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -104,7 +105,8 @@
             android:drawableLeft="@drawable/ic_baseline_lock_24"
             android:drawablePadding="16dp"
             android:hint="비밀번호입력(7자이상,20자이하)"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:windowSoftInputMode="adjustResize"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -126,7 +128,8 @@
             android:drawablePadding="16dp"
             android:hint="비밀번호 재입력"
             android:inputType="textPassword"
-            android:imeOptions="actionDone" />
+            android:imeOptions="actionDone"
+            android:windowSoftInputMode="adjustResize"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
