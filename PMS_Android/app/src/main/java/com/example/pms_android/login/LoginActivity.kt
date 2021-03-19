@@ -47,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
     private fun checkStart() {
         if (login_get_id.text.toString().isNotEmpty()) {
             if (login_input_password.text.toString().isNotEmpty()) {
-                //서버에 로그인 정보를 가져다 주는 부분
+
                 if (login_autologin_checkbox.isChecked) {
                     correctInit(login_get_id.text.toString())
                 }

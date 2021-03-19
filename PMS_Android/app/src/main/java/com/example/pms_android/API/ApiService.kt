@@ -24,6 +24,18 @@ interface ApiService{
     //return 값이 없다.
 
 
+    //회원가입
+    @POST("user")
+    fun signUp(
+        @Query("email")email:String,
+        @Query("name")name:String,
+        @Query("password")password:String
+    ):Response<Any>
+
+
+
+
+
 
 
 
