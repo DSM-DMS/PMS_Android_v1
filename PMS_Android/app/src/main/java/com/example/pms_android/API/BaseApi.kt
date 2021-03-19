@@ -15,6 +15,9 @@ object BaseApi {
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
+
+
+            
         }
         return instance!!
     }
