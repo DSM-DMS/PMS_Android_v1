@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
-import com.example.pms_android.util.KeyboardManager
+import com.example.pms_android.mypage.KeyboardManager
 import com.example.pms_android.R
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_signup.view.*
