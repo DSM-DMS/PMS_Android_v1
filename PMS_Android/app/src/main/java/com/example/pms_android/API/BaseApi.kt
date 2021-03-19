@@ -7,7 +7,7 @@ object BaseApi {
 //API를 연결하기 전
 
     private var instance : Retrofit?=null
-    private const val BASE_URL= " api.smooth-bear.live/ "
+    private const val BASE_URL= "api.smooth-bear.live/ "
 
     fun getInstance():Retrofit{
         if(instance == null){

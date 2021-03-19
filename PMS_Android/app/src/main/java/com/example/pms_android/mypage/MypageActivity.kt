@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.pms_android.Recycler.PointActivity
 import com.example.pms_android.R
-import com.example.pms_android.login.MainLoginActivity
+import com.example.pms_android.login.activity.MainLoginActivity
 import kotlinx.android.synthetic.main.activity_mypage.*
 
 class MypageActivity : AppCompatActivity() {
@@ -26,7 +26,8 @@ class MypageActivity : AppCompatActivity() {
 
             //로그아웃으로 넘어가기
             background6.setOnClickListener{
-                val intent = Intent(this,MainLoginActivity::class.java)
+                val intent = Intent(this,
+                    MainLoginActivity::class.java)
                 startActivity(intent);
             }
 
