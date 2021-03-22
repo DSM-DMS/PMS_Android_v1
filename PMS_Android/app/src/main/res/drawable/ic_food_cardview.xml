@@ -6,10 +6,13 @@
   <path
       android:pathData="M18.278,6L269.722,6C274.846,6 279,9.791 279,14.467L279,367.533c0,4.676 -4.154,8.467 -9.278,8.467L18.278,376C13.154,376 9,372.209 9,367.533L9,14.467C9,9.791 13.154,6 18.278,6Z"
       android:fillColor="#fcfcfc"/>
+<<<<<<< HEAD
   <path
       android:pathData="M19,6L269,6A10,10 0,0 1,279 16L279,18A10,10 0,0 1,269 28L19,28A10,10 0,0 1,9 18L9,16A10,10 0,0 1,19 6z"
       android:fillColor="#4c75b2"/>
   <path
       android:pathData="M9,14h270v54h-270z"
       android:fillColor="#4c75b2"/>
+=======
+>>>>>>> meal
 </vector>

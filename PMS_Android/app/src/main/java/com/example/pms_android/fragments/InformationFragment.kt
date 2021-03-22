@@ -4,7 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.pms_android.databinding.FragmentInformationBinding
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
+import com.example.pms_android.R
+//import com.example.pms_android.login.MainLoginActivity
+import kotlinx.android.synthetic.main.fragment_information.*
 
 
 class InformationFragment : androidx.fragment.app.Fragment() {
