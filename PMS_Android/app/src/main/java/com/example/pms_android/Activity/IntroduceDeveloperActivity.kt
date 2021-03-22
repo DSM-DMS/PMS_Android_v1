@@ -26,7 +26,7 @@ class IntroduceDeveloperActivity : AppCompatActivity() {
             Developer("김재원","Android","jaewon"),
             Developer("이은별","Android","eunbyul"),
             Developer("정고은","iOS(PM)","goeun"),
-            //Developer("","","logo"),
+          
             Developer("김정빈","Server","jungbin2"),
             Developer("정지우","Server","jiwoo2"),
             Developer("강은빈","Front","eunbin"),
