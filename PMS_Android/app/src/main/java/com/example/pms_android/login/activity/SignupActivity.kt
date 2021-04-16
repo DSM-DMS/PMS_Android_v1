@@ -1,4 +1,4 @@
-package com.example.pms_android.login
+package com.example.pms_android.login.activity
 
 import android.graphics.Color
 import android.graphics.drawable.Drawable
@@ -13,7 +13,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.example.pms_android.mypage.KeyboardManager
 import com.example.pms_android.R
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_signup.*
 import splitties.activities.start
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.LoginActivity">
+    tools:context=".login.activity.LoginActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/login_guideline_left"
@@ -39,11 +39,11 @@
             android:id="@+id/login_get_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_baseline_perm_identity_24"
-            android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
             android:drawablePadding="16dp"
-            android:hint="아이디를 입력해주세요"
-            android:inputType="textPersonName" />
+            android:hint="이메일을 입력해주세요"
+            android:inputType="textEmailAddress" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
